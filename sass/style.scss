@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100i,300,400,700,900&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&subset=cyrillic');
+
+$standart-transition: 0.4s;
+$color-seagreen: #00e0d0;
+
+/* RESET */
+	*{
+		margin:0;
+		padding:0;
+	}
+
+/* PAGE STYLE */
+	body{
+		font:{
+			family:'Roboto', sans-serif;
+			size: 14px;			
+		}				
+	}
+
+	.overlay {		
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(52, 39, 92, .85);
+		position: inherit;			
+	}
+
+	a{
+		transition: $standart-transition;		
+		&:hover, &:active, &:focus {
+			text-decoration: none;
+			color: $color-seagreen;
+		}
+	}
+
+	.more{		
+		font-size: 16px;
+		padding: 14px;
+		border:2px solid $color-seagreen;
+		font-weight: 700;
+		display: block;	
+		max-width: 120px;	
+		margin: 30px auto;
+		color: $color-seagreen;
+		&:hover{
+			border:2px solid #fff;
+			color: #fff;
+		}
+	}
+
+/* HEADER */
+	.header{
+		background:{
+			image: url(../img/main-bg.jpg);
+			size: cover;	
+			position: center center;
+			repeat: no-repeat;	
+		}
+		position: relative;
+		float: left;
+		width: 100%;
+		height: 100%;
+		.navbar{
+			margin: 25px 0 0 0;			
+			.logo{
+
+				span{
+					background: {
+						image:url(../img/icons/logo.svg);
+						size: contain;
+					}					
+			    width: 32px;
+			    height: 32px;
+			    display: inline-block;
+			    position:relative;
+			    margin: 0px 5px -6px 10px;			    
+				}				
+				p{
+					font:{
+						size: 30px;
+						family: 'Roboto';
+						weight: 100;
+						style: italic;
+					}
+					color: $color-seagreen;
+					text-transform: uppercase;
+					display: inline;									
+				}			
+			}
+			ul {
+				padding: 0;
+				margin: 10px 0 0 0;
+				text-align: right;
+				li {
+					padding: 0;
+					margin: 0;
+					list-style: none;
+					display: inline;			
+					a{
+						font:{
+							size: 13px;
+							family: 'Roboto';
+							weight: 700;
+							style: black;
+						}
+						padding: 35px 22px;
+						color: #fff;				
+						&:hover,&:focus, &:active {
+							color: $color-seagreen;
+						}
+					}
+				}
+			}
+		}		
+		.banner{			
+			h1{
+				font:{
+					family: 'PlayFairDisplay';
+					size: 32px;				 
+				}
+				color: #fff;
+				text-align: center;
+			}
+			hr{
+				color: $color-seagreen;
+				width: 50px;
+				margin: 0 auto;
+			}
+			p{
+				color: #ebebee;
+				text-align: center;
+				line-height: 24px;
+				padding: 25px 0;
+			}
+		}		
+	}
+
+	
