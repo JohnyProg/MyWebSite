@@ -10,6 +10,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
+  background-color: #E2E2DF;
 }
 
 h1, h2 {
@@ -47,6 +48,7 @@ a:hover, a:active, a:focus {
   display: block;
   max-width: 120px;
   color: #00e0d0;
+  text-align: center;
 }
 
 .more:hover {
@@ -58,9 +60,8 @@ a:hover, a:active, a:focus {
 .header {
   background-image: url(../img/main-bg.jpg);
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
-  /* position: relative;	 */
   width: 100%;
   height: 100vh;
 }
@@ -70,7 +71,7 @@ a:hover, a:active, a:focus {
   margin: 0 auto;
   left: 0;
   right: 0;
-  bottom: 30px;
+  bottom: calc(50% - 240px);
 }
 
 .navbar {
@@ -89,7 +90,6 @@ a:hover, a:active, a:focus {
 
 .navbar .logo p {
   font-size: 30px;
-  font-family: 'Roboto';
   font-weight: 100;
   font-style: italic;
   color: #00e0d0;
@@ -112,7 +112,6 @@ a:hover, a:active, a:focus {
 
 .navbar ul li a {
   font-size: 13px;
-  font-family: 'Roboto';
   font-weight: 700;
   font-style: black;
   padding: 35px 22px;
@@ -149,7 +148,7 @@ a:hover, a:active, a:focus {
 .about_me {
   text-align: center;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 60px auto;
 }
 
 .about_me h2 {
@@ -158,20 +157,28 @@ a:hover, a:active, a:focus {
 
 .about_me p {
   line-height: 25px;
-  padding: 10px 0;
+  padding: 10px 15px;
+  letter-spacing: 0.3px;
+}
+
+.skills {
+  background-image: url(../img/skills-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .skills .row {
-  margin: 50px;
+  margin-top: 60px;
 }
 
 .skills .row .html5 {
-  background-image: url(../img/icons/html.svg);
+  background-image: url(../img/icons/html-5-logo.svg);
   background-size: contain;
 }
 
 .skills .row .css3 {
-  background-image: url(../img/icons/css.svg);
+  background-image: url(../img/icons/css-3.svg);
   background-size: contain;
 }
 
@@ -180,10 +187,195 @@ a:hover, a:active, a:focus {
   background-size: contain;
 }
 
-.icon {
-  width: 32px;
-  height: 32px;
+.skills .about_skill {
+  margin: 30px 0 60px 0;
+}
+
+.skills .about_skill p {
+  line-height: 25px;
+  padding: 10px 0;
+  letter-spacing: 0.3px;
+  color: #fff;
+  max-width: 1100px;
   margin: 0 auto;
+  text-align: center;
+}
+
+.skills .about_skill a {
+  margin: 30px auto;
+}
+
+.icon {
+  margin: 30px auto;
   width: 100px;
   height: 100px;
+}
+
+/* PORTFOLIO */
+.portfolio {
+  text-align: center;
+}
+
+.portfolio h2 {
+  margin: 30px 0;
+}
+
+.portfolio .more {
+  margin: 35px auto;
+  color: rgba(52, 39, 92, 0.85);
+  border: 2px solid rgba(52, 39, 92, 0.85);
+}
+
+.portfolio .more:hover {
+  color: #00e0d0;
+  border: 2px solid #00e0d0;
+}
+
+.portfolio .container {
+  margin: 20px auto 40px;
+}
+
+.thumb {
+  position: relative;
+  overflow: hidden;
+  width: 375px;
+  height: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+  transition: 0.4s;
+  margin: 20px auto;
+}
+
+.thumb img {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  object-fit: cover;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 375px;
+  height: 300px;
+  z-index: -1;
+}
+
+.thumb:hover {
+  background-color: rgba(52, 39, 92, 0.85);
+}
+
+.thumb:hover::before {
+  content: '';
+  background-image: url(../img/icons/eye-close-up.svg);
+  background-size: cover;
+  width: 60px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: calc(50% - 25px);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+/* FOOTER */
+.footer {
+  background-image: url(../img/footer-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer .footer_content {
+  margin: 60px auto;
+  color: #fff;
+}
+
+.footer h2 {
+  text-align: center;
+}
+
+.footer p {
+  line-height: 20px;
+  padding: 10px 0;
+  letter-spacing: 0.3px;
+}
+
+.footer .contact_me {
+  margin: 15px auto;
+}
+
+.footer .contact_me span {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  position: relative;
+  margin: 0px 5px -2px 0px;
+}
+
+.footer .contact_me p {
+  font-size: 15px;
+  font-weight: 100;
+  font-style: italic;
+  color: #00e0d0;
+  display: inline;
+  padding: 2px 0;
+}
+
+.footer .phone span {
+  background-image: url(../img/icons/telephone.svg);
+  background-size: contain;
+}
+
+.footer .email span {
+  background-image: url(../img/icons/email.svg);
+  background-size: contain;
+}
+
+.footer .social {
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+.footer .social span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.footer .social .row {
+  margin: 10px auto;
+}
+
+.footer .vk span {
+  background-image: url(../img/icons/vk.svg);
+  background-size: contain;
+}
+
+.footer .facebook span {
+  background-image: url(../img/icons/facebook.svg);
+  background-size: contain;
+}
+
+.footer .instagram span {
+  background-image: url(../img/icons/instagram.svg);
+  background-size: contain;
+}
+
+.footer .telegram span {
+  background-image: url(../img/icons/telegram.svg);
+  background-size: contain;
+}
+
+.footer .viber span {
+  background-image: url(../img/icons/viber.svg);
+  background-size: contain;
+}
+
+.footer .whatsapp span {
+  background-image: url(../img/icons/whatsapp.svg);
+  background-size: contain;
 }
