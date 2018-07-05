@@ -56,6 +56,10 @@ a:hover, a:active, a:focus {
   color: #fff;
 }
 
+.display_none {
+  display: block !important;
+}
+
 /* HEADER */
 .header {
   background-image: url(../img/main-bg.jpg);
@@ -74,11 +78,11 @@ a:hover, a:active, a:focus {
   bottom: calc(50% - 240px);
 }
 
-.navbar {
+.header .row {
   margin: 25px 0 0 0;
 }
 
-.navbar .logo span {
+.logo span {
   background-image: url(../img/icons/logo.svg);
   background-size: contain;
   width: 32px;
@@ -88,7 +92,7 @@ a:hover, a:active, a:focus {
   margin: 0px 5px -6px 10px;
 }
 
-.navbar .logo p {
+.logo p {
   font-size: 30px;
   font-weight: 100;
   font-style: italic;
@@ -97,20 +101,62 @@ a:hover, a:active, a:focus {
   display: inline;
 }
 
-.navbar ul {
+.navbar .menu_icon {
+  display: none;
+  width: 40px;
+  height: 35px;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+
+.navbar .menu_icon span {
+  display: block;
+  position: absolute;
+  height: 7px;
+  width: 100%;
+  background: #00e0d0;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.navbar .menu_icon span:nth-child(1) {
+  top: 0px;
+}
+
+.navbar .menu_icon span:nth-child(2) {
+  top: 13px;
+}
+
+.navbar .menu_icon span:nth-child(3) {
+  top: 13px;
+}
+
+.navbar .menu_icon span:nth-child(4) {
+  top: 26px;
+}
+
+.navbar .nav {
+  display: block;
+}
+
+.navbar .nav ul {
   padding: 0;
   margin: 10px 0 0 0;
   text-align: right;
 }
 
-.navbar ul li {
+.navbar .nav ul li {
   padding: 0;
   margin: 0;
   list-style: none;
   display: inline;
 }
 
-.navbar ul li a {
+.navbar .nav ul li a {
   font-size: 13px;
   font-weight: 700;
   font-style: black;
@@ -118,8 +164,28 @@ a:hover, a:active, a:focus {
   color: #fff;
 }
 
-.navbar ul li a:hover, .navbar ul li a:focus, .navbar ul li a:active {
+.navbar .nav ul li a:hover, .navbar .nav ul li a:focus, .navbar .nav ul li a:active {
   color: #00e0d0;
+}
+
+.navbar_state_open .menu_icon span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.navbar_state_open .menu_icon span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.navbar_state_open .menu_icon span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.navbar_state_open .menu_icon span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
 }
 
 .banner {
@@ -378,4 +444,50 @@ a:hover, a:active, a:focus {
 .footer .whatsapp span {
   background-image: url(../img/icons/whatsapp.svg);
   background-size: contain;
+}
+
+/* BUTTON UP */
+.button-up {
+  background-image: url(../img/icons/arrow-up.svg);
+  background-size: contain;
+  display: none;
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  right: 15px;
+  bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar {
+    position: relative;
+  }
+  .navbar .menu_icon {
+    display: inline-block;
+    z-index: 55;
+  }
+  .navbar .nav {
+    position: absolute;
+    display: none;
+    background-color: rgba(52, 39, 92, 0.95);
+    z-index: 50;
+    overflow: auto;
+    top: -25px;
+    right: -30px;
+    padding: 10px;
+    width: 320px;
+    height: 100vh;
+  }
+  .navbar .nav ul {
+    margin: 90px auto;
+  }
+  .navbar .nav ul li a {
+    padding: 12px;
+  }
+  .navbar .menu_links-item {
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+  }
 }
