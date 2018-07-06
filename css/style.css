@@ -159,13 +159,16 @@ a:hover, a:active, a:focus {
 .navbar .nav ul li a {
   font-size: 13px;
   font-weight: 700;
-  font-style: black;
   padding: 35px 22px;
   color: #fff;
 }
 
 .navbar .nav ul li a:hover, .navbar .nav ul li a:focus, .navbar .nav ul li a:active {
   color: #00e0d0;
+}
+
+.active {
+  color: #00e0d0 !important;
 }
 
 .navbar_state_open .menu_icon span:nth-child(1) {
@@ -459,12 +462,15 @@ a:hover, a:active, a:focus {
 }
 
 @media screen and (max-width: 767px) {
+  h1, h2 {
+    font-size: 25px;
+  }
   .navbar {
     position: relative;
   }
   .navbar .menu_icon {
     display: inline-block;
-    z-index: 55;
+    z-index: 51;
   }
   .navbar .nav {
     position: absolute;
@@ -481,13 +487,46 @@ a:hover, a:active, a:focus {
   .navbar .nav ul {
     margin: 90px auto;
   }
+  .navbar .nav ul li {
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+  }
   .navbar .nav ul li a {
     padding: 12px;
   }
-  .navbar .menu_links-item {
-    display: block;
-    padding: 20px 0;
+  .footer {
     text-align: center;
-    color: #ffffff;
+    line-height: 25px;
+  }
+  .footer .col-md-4 {
+    margin: 20px auto;
+  }
+  .footer .social span {
+    height: 75px;
+    width: 75px;
+  }
+}
+
+@media screen and (max-width: 449px) {
+  .banner {
+    position: inherit;
+  }
+}
+
+@media screen and (max-height: 569px) {
+  .header .banner {
+    position: inherit;
+  }
+  .header .banner p {
+    padding: 10px;
+    line-height: 20px;
+  }
+  .header .banner h1 {
+    line-height: 20px;
+  }
+  .header .more {
+    position: inherit;
+    margin: 10px auto;
   }
 }

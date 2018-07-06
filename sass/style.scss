@@ -169,8 +169,12 @@ $color-seagreen: #00e0d0;
 						}
 					}
 				}
-			}
+			}			
 		}
+	}
+	
+	.active{
+		color: $color-seagreen !important;
 	}
 
 	.navbar_state_open {
@@ -468,6 +472,11 @@ $color-seagreen: #00e0d0;
 
 
 	@media screen and (max-width: 767px) {
+	  h1, h2{
+			font:{
+				size: 25px;
+			}
+	  }
 	  .navbar{
 	  	position: relative;
 			.menu_icon {
@@ -475,23 +484,64 @@ $color-seagreen: #00e0d0;
 				z-index: 51;
 	    }
 	    .nav{
-	    position: absolute;
-	    display: none;	    	 
-	    background-color: rgba(52, 39, 92, .95);	    
-	    z-index: 50;
-	    overflow: auto;
-	    top: -25px;
-	    right: -30px;	    
-	    padding: 10px;	    
-	    width: 320px;
-	    height: 100vh;
-	    ul{
-	    	margin: 90px auto;
-	    	li{
-	    		a{
-	    			padding: 12px;
-	    		}
-	    	}	    	
-	    }	    
-	  }	  
+		    position: absolute;
+		    display: none;	    	 
+		    background-color: rgba(52, 39, 92, .95);	    
+		    z-index: 50;
+		    overflow: auto;
+		    top: -25px;
+		    right: -30px;	    
+		    padding: 10px;	    
+		    width: 320px;
+		    height: 100vh;
+		    ul{
+		    	margin: 90px auto;
+		    	li{
+		    		display: block;
+		    		    margin: 25px auto;
+    						text-align: center;
+		    		a{
+		    			padding: 12px;
+		    		}
+		    	}	    	
+		    }
+		  }	    
+	  }
+	  .footer{
+	  	text-align: center;
+	  	line-height: 25px;
+	  	.col-md-4{
+	  		margin: 20px auto;	  		
+	  	}
+	  	.social {
+		 		span{
+		 			height: 75px;
+					width: 75px;
+				}
+			}
+	  }	   	  
+	}	 		
+
+	@media screen and (max-width: 449px) {
+		.banner{
+			position: inherit;
+		}
+	}
+	@media screen and (max-height: 569px) {
+		.header{
+			.banner{
+				position: inherit;
+				p{
+					padding: 10px;
+					line-height: 20px
+				}
+				h1{
+					line-height: 20px
+				}			
+			}
+			.more{
+				position: inherit;
+				margin: 10px auto;
+			}
+		}		
 	}
