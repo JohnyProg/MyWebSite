@@ -57,7 +57,7 @@ Need press button to mone on to content
 	$(function() { 
 		$('a[href="#content"]').click(function(event) { 
 			event.preventDefault() 
-			var el = $('.content'); 
+			var el = $('#content'); 
 			$('body,html').animate({ 
 				scrollTop: $(el).offset().top 
 			}, 1000); 
