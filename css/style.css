@@ -453,11 +453,23 @@ a:hover, a:active, a:focus {
   background-size: contain;
 }
 
+/* BUTTON UP */
+.button-up {
+  background-image: url(../img/icons/arrow-up.svg);
+  background-size: contain;
+  display: none;
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  right: 15px;
+  bottom: 20px;
+}
+
 /* 
 ******************************************************
 *********************ABOUT_ME-PAGE***********************
 ******************************************************
- */
+*/
 .about {
   margin: 50px auto;
   text-align: center;
@@ -512,16 +524,55 @@ a:hover, a:active, a:focus {
   padding: 30px 0 15px 0;
 }
 
-/* BUTTON UP */
-.button-up {
-  background-image: url(../img/icons/arrow-up.svg);
-  background-size: contain;
-  display: none;
-  width: 35px;
-  height: 35px;
-  position: fixed;
-  right: 15px;
-  bottom: 20px;
+/* 
+******************************************************
+*********************PORTFOLIO-PAGE***********************
+******************************************************
+*/
+.portfolio-page {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.portfolio-page p {
+  line-height: 24px;
+  padding: 10px 0 10px 0;
+}
+
+.portfolio-page .portfolio-project {
+  margin: 30px auto;
+  border: 2px solid rgba(52, 39, 92, 0.85);
+}
+
+.portfolio-page .portfolio-project .preview-pic img {
+  width: 100%;
+  height: 220px;
+  padding: 10px;
+}
+
+.portfolio-page .portfolio-project .preview h3 {
+  padding: 10px 0 10px 0;
+}
+
+.portfolio-page .portfolio-project .preview p {
+  padding: 10px;
+  line-height: 22px;
+}
+
+.portfolio-page .portfolio-project .preview span {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.portfolio-page .portfolio-project .preview a {
+  margin: 10px auto;
+  color: rgba(52, 39, 92, 0.85);
+  border-color: rgba(52, 39, 92, 0.85);
+}
+
+.portfolio-page .portfolio-project .preview a:hover {
+  color: #00e0d0;
+  border-color: #00e0d0;
 }
 
 /* MEDIA */
@@ -539,7 +590,7 @@ a:hover, a:active, a:focus {
   .navbar .nav {
     position: absolute;
     display: none;
-    background-color: rgba(52, 39, 92, 0.95);
+    background-color: rgba(52, 39, 92, 0.85);
     z-index: 50;
     overflow: auto;
     top: -25px;
@@ -569,6 +620,9 @@ a:hover, a:active, a:focus {
   .footer .social span {
     height: 75px;
     width: 75px;
+  }
+  .preview-pic img {
+    height: 100% !important;
   }
 }
 
