@@ -559,6 +559,166 @@ $color-purple: rgba(52, 39, 92, .85);;
 		}
 	}
 
+/* 
+******************************************************
+*********************PROJECT-PAGE***********************
+******************************************************
+*/
+
+	.project-page{
+		margin: 50px auto;
+		h2{
+			text-align: center;
+			padding: 20px;
+		}
+		p{
+			line-height: 24px;
+			padding: 10px 0 10px 0;
+			a{
+				color: $color-purple;
+				font:{
+					weight: 700;
+					size: 16px;
+				}
+				&:hover{
+					color: $color-seagreen;
+				}
+			}	
+		}
+		
+		.project-skills{
+			p{
+				span{
+					color: $color-purple;
+					font:{
+						weight: 700 ;
+						size: 16px ;
+					}
+					padding-right: 15px;
+				}						
+			}							
+		}
+	}
+
+/* 
+******************************************************
+*********************CONTACTS-PAGE***********************
+******************************************************
+*/
+
+	.contacts-page{		
+		text-align: center;
+		p{
+			line-height: 24px;
+			padding: 10px 0 10px 0;
+		}
+		h2{
+			padding: 15px;
+		}
+		.container{
+			max-width: 900px;
+			margin: 50px auto; 
+		}
+		h3{
+			font-size: 17px;
+		}
+	}
+
+	.form{
+		display: inline;		
+    input, textarea{
+    	display: block;
+    	margin: 15px auto;
+    	padding-left: 30px;
+    	width: 100%;
+	    height: 50px;
+	    font:{
+	    	size: 18px;
+	    	weight: 500; 
+	    }
+	    line-height: 32px;
+   		box-shadow: 0 4px 0 rgba(0,0,0,0.15);
+   		border: none;   		
+   		border-radius: 7px;
+    }
+    textarea{
+    	height: 100px; 
+    }
+    a{
+			margin: 10px auto;
+			color: $color-purple;
+			border-color: $color-purple;
+			&:hover{
+				color: $color-seagreen;
+				border-color: $color-seagreen;
+			}					
+		}
+	}
+
+	.contacts{
+		text-align: left;
+		a{
+			display: block;
+			font:{
+				size: 22px;
+				weight: 700;
+			}			
+			color: $color-purple;
+		}
+		p{
+			font-size: 18px;
+		}
+		.social{
+			margin: 0 auto;
+			display: inline-block;
+			position:relative;
+			text-align: center;			
+			span{	
+		    display: inline-block;
+		    width: 40px;
+	    	height: 40px;
+	    	margin: 0 auto;
+			}
+		
+			.vk-cont span{
+				background: {
+					image:url(../img/icons/vk-cont.svg);
+					size: contain;
+				}		
+			}
+			.facebook-cont span{
+				background: {
+					image:url(../img/icons/facebook-cont.svg);
+					size: contain;
+				}
+			}
+			.instagram-cont span{
+				background: {
+					image:url(../img/icons/instagram-cont.svg);
+					size: contain;
+				}
+			}
+			.telegram-cont span{
+				background: {
+					image:url(../img/icons/telegram-cont.svg);
+					size: contain;
+				}			
+			}
+			.viber-cont span{
+				background: {
+					image:url(../img/icons/viber-cont.svg);
+					size: contain;
+				}			
+			}
+			.whatsapp-cont span{
+				background: {
+					image:url(../img/icons/whatsapp-cont.svg);
+					size: contain;
+				}			
+			}
+		}
+	}
+
 /* MEDIA */
 	@media screen and (max-width: 767px) {
 	  h1, h2{
@@ -595,7 +755,10 @@ $color-purple: rgba(52, 39, 92, .85);;
 		    	}	    	
 		    }
 		  }	    
-	  }
+	  }	
+  	.contacts{
+			text-align: center;
+		}
 	  .footer{
 	  	text-align: center;
 	  	line-height: 25px;

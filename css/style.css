@@ -575,6 +575,161 @@ a:hover, a:active, a:focus {
   border-color: #00e0d0;
 }
 
+/* 
+******************************************************
+*********************PROJECT-PAGE***********************
+******************************************************
+*/
+.project-page {
+  margin: 50px auto;
+}
+
+.project-page h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+.project-page p {
+  line-height: 24px;
+  padding: 10px 0 10px 0;
+}
+
+.project-page p a {
+  color: rgba(52, 39, 92, 0.85);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.project-page p a:hover {
+  color: #00e0d0;
+}
+
+.project-page .project-skills p span {
+  color: rgba(52, 39, 92, 0.85);
+  font-weight: 700;
+  font-size: 16px;
+  padding-right: 15px;
+}
+
+/* 
+******************************************************
+*********************CONTACTS-PAGE***********************
+******************************************************
+*/
+.contacts-page {
+  text-align: center;
+}
+
+.contacts-page p {
+  line-height: 24px;
+  padding: 10px 0 10px 0;
+}
+
+.contacts-page h2 {
+  padding: 15px;
+}
+
+.contacts-page .container {
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+.contacts-page h3 {
+  font-size: 17px;
+}
+
+.form {
+  display: inline;
+}
+
+.form input, .form textarea {
+  display: block;
+  margin: 15px auto;
+  padding-left: 30px;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 7px;
+}
+
+.form textarea {
+  height: 100px;
+}
+
+.form a {
+  margin: 10px auto;
+  color: rgba(52, 39, 92, 0.85);
+  border-color: rgba(52, 39, 92, 0.85);
+}
+
+.form a:hover {
+  color: #00e0d0;
+  border-color: #00e0d0;
+}
+
+.contacts {
+  text-align: left;
+}
+
+.contacts a {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: rgba(52, 39, 92, 0.85);
+}
+
+.contacts p {
+  font-size: 18px;
+}
+
+.contacts .social {
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+.contacts .social span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.contacts .social .vk-cont span {
+  background-image: url(../img/icons/vk-cont.svg);
+  background-size: contain;
+}
+
+.contacts .social .facebook-cont span {
+  background-image: url(../img/icons/facebook-cont.svg);
+  background-size: contain;
+}
+
+.contacts .social .instagram-cont span {
+  background-image: url(../img/icons/instagram-cont.svg);
+  background-size: contain;
+}
+
+.contacts .social .telegram-cont span {
+  background-image: url(../img/icons/telegram-cont.svg);
+  background-size: contain;
+}
+
+.contacts .social .viber-cont span {
+  background-image: url(../img/icons/viber-cont.svg);
+  background-size: contain;
+}
+
+.contacts .social .whatsapp-cont span {
+  background-image: url(../img/icons/whatsapp-cont.svg);
+  background-size: contain;
+}
+
 /* MEDIA */
 @media screen and (max-width: 767px) {
   h1, h2 {
@@ -609,6 +764,9 @@ a:hover, a:active, a:focus {
   }
   .navbar .nav ul li a {
     padding: 12px;
+  }
+  .contacts {
+    text-align: center;
   }
   .footer {
     text-align: center;
